@@ -1,0 +1,1779 @@
+//META{"name":"Rough Soul Clear Discord - NoBG","description":"A nice and clean dark based theme with purple highlights and no background for the Rough Soul Community.","author":"Jaiseck","version":"7.9"}*//
+/* inspired by Dddsasul Clear Discord*/
+
+/*
+#########################
+# DISCORD MAIN SETTINGS #
+#########################
+*/
+
+/* Make The Image Darker */
+.bg-1QIAus {
+    /* background: none !important; */
+    background: rgba(0, 0, 0, 0) !important;
+}
+
+/* New Variables */
+.theme-dark  {
+	--header-primary: #dcddde;
+    --header-secondary: #b9bbbe;
+    --text-normal: #dcddde;
+    --text-muted: #72767d;
+    --text-link: #00b0f4;
+    --channels-default: #8e9297;
+    /*--interactive-normal: #b9bbbe;*/
+	--interactive-normal: #475366;
+    /*--interactive-hover: #dcddde;*/
+	--interactive-hover: #637ff1;
+    /*--interactive-active: #fff;*/
+	--interactive-active: #637ff1;
+    /*--interactive-muted: #4f545c;*/
+	--interactive-muted: #4f545c;
+    /*--background-primary: #36393f;*/
+	--background-primary: none !important;
+    /*--background-secondary: #2f3136;*/
+	--background-secondary: none !important;
+    /*--background-tertiary: #202225;*/
+	--background-secondary-alt: none !important;
+	/**/
+	--background-tertiary: none !important;
+    /*--background-accent: #4f545c;*/
+	--background-accent: none !important;
+    /*--background-floating: #18191c;*/
+    --background-transparent:  none !important;
+	--background-floating: non !important;
+    --background-modifier-hover: rgba(56,0,77,0.3);
+    --background-modifier-active: rgba(38,0,77,0.9);
+    --background-modifier-selected: rgba(38, 0, 77, 0.9);
+	/*--background-modifier-hover: background: linear-gradient(90deg, rgba(91, 187, 255, 0.6), rgba(0, 0, 0, 0)) !important;
+    --background-modifier-active: background: linear-gradient(90deg, rgba(91, 187, 255, 0.6), rgba(41, 137, 216, 0.4)) !important;
+    --background-modifier-selected: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(41, 137, 216, 0.4)) !important;*/
+    --background-modifier-accent: hsla(0,0%,100%,0.06);
+	--background-mentioned: rgba(250,166,26,0.05);
+	--background-mentioned-hover: rgba(250,166,26,0.08);
+    --elevation-low: 0 1px 0 rgba(4,4,5,0.2),0 1.5px 0 rgba(6,6,7,0.05),0 2px 0 rgba(4,4,5,0.05);
+    --elevation-high: 0 8px 16px rgba(0,0,0,0.24);
+    --guild-header-text-shadow: 0 1px 1px rgba(0,0,0,0.4);
+    /*--channeltextarea-background: #40444b;*/
+	--channeltextarea-background: rgba(56,0,77,0.6);
+    /*--activity-card-background: #202225;*/
+	--activity-card-background: none !important;
+    --deprecated-panel-background: none !important;
+    /*--deprecated-card-bg: rgba(32,34,37,0.6);*/
+	--deprecated-card-bg: rgba(0,0,0,0);
+    /*--deprecated-card-editable-bg: rgba(32,34,37,0.3);*/
+	--deprecated-card-editable-bg: rgba(0,0,0,0);
+    /*--deprecated-store-bg: #36393f;*/
+	--deprecated-store-bg: none !important;
+    --deprecated-quickswitcher-input-background: #72767d;
+    --deprecated-quickswitcher-input-placeholder: hsla(0,0%,100%,0.3);
+    --deprecated-text-input-bg: background: linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(91, 187, 255, 0.4), rgba(0, 0, 0, 0.4)) !important;
+    --deprecated-text-input-border: rgba(0,0,0,0.3);
+    --deprecated-text-input-border-hover: #040405;
+    --deprecated-text-input-border-disabled: #202225;
+    --deprecated-text-input-prefix: #dcddde;
+	--background-message-box: rgba(56, 0, 77, 0.9) !important;
+	--background-friends: none !important;
+	--background-right-click-menu-and-sub-menu: rgba(56, 0, 77, 0.9) !important;
+	--background-color-standard-hover: #637ff1; /* Or for some green rgba(2, 132, 108, 1) !important */
+	--background-color-welcome-server: rgba(56, 0, 77, 0.9) !important;
+	--background-color-tooltip: rgba(38,0,77,0.9) !important;
+	--background-floating: rgba(38,0,77,0.9) !important;
+	--text-color-tooltip: #637ff1;
+	--embed-left-color: rgba(71, 0, 229, 1.0);
+	--embed-background-color: rgba(30, 0, 94, 0.1);
+	/* Custom */
+	--background-color-purple: rgba(38,0,77,0.9) !important;
+	--background-color-purple-full: rgba(38,0,77,1) !important;
+	--background-color-purple-core: rgba(44, 0, 66, 0.9) !important;
+	--background-color-purple-core-full: rgba(44, 0, 66, 1) !important;
+	--background-color-purple-header: rgba(20, 0, 33, 0.9) !important;
+	--background-color-purple-header-full: rgba(20, 0, 33, 1) !important;
+	--background-color-dark-purple: rgba(30,0,45,0.7) !important;
+	--background-color-dark-purple-full: rgba(30,0,45,0.95) !important;
+	--background-color-dark-purple-semi: rgba(30,0,45,0.3) !important;
+	--background-color-dark-purple-semi-focus: rgba(30,0,45,0.5) !important;
+	--background-color-send-message-button: rgba(77,0,102,1) !important;
+	--background-color-text-box: rgba(56,0,77,0.6) !important;
+	--info-warning-foreground: rgba(71, 0, 180, 1) !important; /* Color of ping left border */
+	--select-all-server-border: rgba(0, 0, 0, 0) !important;
+	--background-inbox: rgba(30, 0, 45, 0.9) !important;
+	--background-inbox-header: rgba(20, 0, 33, 0.9) !important;
+	--background-inbox-message-header: rgba(37, 0, 52, 0.9) !important;
+	--background-inbox-message-core: rgba(44, 0, 66, 0.9) !important;
+	--background-search-box: rgba(30,0,45,0.9) !important;
+	--background-search-box-options: rgba(30,0,45,0.9) !important;
+	--background-gifs-stickers-emoji: rgba(30,0,45,0.9) !important;
+	--background-gifs-stickers-emoji-core: rgba(44, 0, 66, 0.9) !important;
+	--background-button-filled: rgba(77, 0, 102, 1);
+	--background-color-reaction-picker: rgba(30,0,45,0.5);
+	--header-primary-dark: #dcddde;
+    --header-secondary-dark: #b9bbbe;
+    --text-normal-dark: #dcddde;
+    --text-muted-dark: #72767d;
+    --text-link-dark: #00b0f4;
+}
+
+/* To check for new variables uses */
+
+/* emoji size if needed */
+/*
+.emoji {
+	width: 15px;
+}
+*/
+
+/* Border of all server selected (when you click between server icons) */
+.tree-3agP2X:focus-visible {
+	outline: var(--select-all-server-border) auto 1px;
+}
+
+/* Color of selected server indicator (on the left of server icon) */
+.item-2LIpTv {
+	background-color: var(--info-warning-foreground);
+}
+
+/* Inbox Background (Mentions & Unread) */
+.recentMentionsPopout-2bI1ZN, .messagesPopoutWrap-3zryHW {
+	background: var(--background-inbox);
+	border-radius: 8px;
+}
+
+/* Inbox Header Background */
+.header-1w9Q93 {
+	background: var(--background-inbox-header);
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+
+/* Inbox Messages Header Background */
+.channelHeader-DFRX8q {
+	background: var(--background-inbox-message-header);
+	border-radius: 8px;
+	margin-left: 16px;
+}
+
+/*Inbox Messages Core Background*/
+.messageContainer-3VTXBC {
+	background: var(--background-inbox-message-core);
+}
+
+/* Settings General Background */
+.layer-86YKbF {
+	background: var(--background-color-dark-purple);
+}
+
+/* Server Rules Background */
+.theme-dark .root-g14mjS {
+	background: var(--background-color-dark-purple);
+}
+
+/* Server Rules Footer Background */
+.theme-dark .footer-31IekZ {
+	background: var(--background-color-dark-purple-semi);
+}
+
+/* Channel Update Seletion Background */
+.popout-1KHNAq {
+	background: var(--background-color-dark-purple-full);
+}
+
+/* Channel Update Selection Selecte / Hover Background */
+.option-2eIyOn.focused-ODgjnC, .option-2eIyOn:focus, .option-2eIyOn:hover {
+	background-color: var(--background-modifier-hover);
+}
+
+/* Tooltip (hover server icon and you'll see the tooltip pop on the right) */
+.theme-dark .tooltip-2QfLtc {
+	color: var(--text-color-tooltip);
+	background-color: var(--background-color-tooltip);
+}
+.theme-dark .tooltipBlack-PPG47z {
+	color: var(--text-color-tooltip);
+	background-color: var(--background-color-tooltip);
+}
+
+/* Color of server welcome screen background */
+.wrapper-1rqM3x {
+	background-color: var(--background-color-welcome-server);
+}
+
+/* Premium Offer Popup */
+.premiumPromo-fVlLu-{
+	background-color: var(--background-color-welcome-server);
+}
+
+/* Main welcome window when joining server */
+.theme-dark .root-1gCeng{
+	background-color: var(--background-color-welcome-server);
+}
+
+/* Background Right Click Menu */
+.styleFlexible-wGDiIL, .scroller-3BxosC {
+	background: var(--background-right-click-menu-and-sub-menu);
+}
+
+/* Background color of standard hover */
+.colorDefault-2K3EoJ.focused-3afm-j {
+	background-color: var(--background-color-standard-hover);
+	color: #ffffff;
+}
+
+/* Background of News / Changelog window */
+.content-1LAB8Z {
+	background-color: var(--background-modifier-active);
+}
+
+/* Background GIFs/Stickers/Emoji Pannel */
+.contentWrapper-3vHNP2 {
+	background-color: var(--background-gifs-stickers-emoji);
+}
+
+/* Background GIFs Search Field */
+.header-2TLOnc {
+	background-color: var(--background-color-dark-purple-semi-focus);
+}
+
+/* GIFs Search Input Background */
+.input-2m5SfJ {
+	background-color: var(--background-color-text-box);
+	border-radius: 15px;
+}
+
+/* Background GIFs Picker */
+.content-A8TzKf {
+	background-color: var(--background-gifs-stickers-emoji-core);
+}
+
+/* Stickers Search Field */
+.header-uVCAlo {
+	background-color: var(--background-color-dark-purple-semi-focus);
+}
+
+/* Stickers & Emoji Search Input Background */
+.input-2FSSDe {
+	background-color: var(--background-color-text-box);
+	border-radius: 15px;
+}
+
+/* Background Stickers Picker */
+.listWrapper-2DwCYS, .wrapper-22rqw6 {
+	background-color: var(--background-gifs-stickers-emoji-core);
+}
+
+/* Emoji Search Field */
+.header-11eigE {
+	background-color: var(--background-color-dark-purple-semi-focus);
+}
+
+/* Deversity Selector List Background */
+.diversitySelectorOptions-3DhNYs {
+	background-color: var(--background-color-dark-purple-full);
+}
+
+/* Background Emoji Picker */
+.bodyWrapper-1eSOtW, .wrapper-22rqw6 {
+	background-color: var(--background-gifs-stickers-emoji-core);
+}
+
+/* Background Stickers & Emoji bottom left icon + inspector */
+.unicodeShortcut-3N8oDe, .standardStickerShortcut-ObSns3, .inspector-DFKXwB {
+	background-color: var(--background-color-dark-purple-full);
+}
+
+/* Boost Level Icon */
+.disableColor-MwOAZf, .iconBackgroundTierNone-3MPhMJ, .iconBackgroundTierOne-2LhaMB, .iconBackgroundTierThree-3qw3JX, .iconBackgroundTierTwo-3bCmdc {
+    color: #637ff1;
+}
+
+/* Settings Image .ui-standard-sidebar-view */
+.standardSidebarView-3F1I7i {
+	background: rgba(26, 0, 51, 0.9) !important;
+    background-size: cover !important;
+}
+/* Also Settings */
+/* .sidebar-region, .content-region */
+.sidebarRegion-VFTUkN, .contentRegion-3nDuYy, .menu-Sp6bN1 {
+    background: none !important;
+}
+
+/* .layers,  .layer-3QrUeG, */
+.appMount-3lHmkl, .layer-3QrUeG, .layers-3iHuyZ {
+    background: none !important;
+}
+
+/* Background Image URL Must be HTTPS */
+body {
+	background: none !important;
+	background-color: none !important;
+    height: 100vh !important;
+    background-repeat: no-repeat !important;	
+}
+
+/* Discord - Main - Home Button - Not selected */
+/* .theme-dark .button-OhfaWu, .theme-light .button-OhfaWu,  */
+.childWrapper-1j_1ub, .childWrapper-1j_1ub .wrapper-3kah-n, .childWrapper-1j_1ub .wrapper-3kah-n:hover {
+    background-color: rgb(77, 0, 102);
+    color: #475366;
+}
+
+/* Discord - Main - Home Icon - Selected */
+/* .theme-dark .button-OhfaWu.selected-wSa2KV, .theme-light .button-OhfaWu.selected-wSa2KV,  */
+.wrapper-3kah-n.selected-1Drb7Z .childWrapper-1j_1ub, .childWrapper-1j_1ub .wrapper-3kah-n:hover {
+    background-color: rgb(77, 0, 102);
+	color: #637ff1;
+}
+
+/* Discord - Main - Radient from left side of Bell (mute icon) Top right */
+.theme-dark .children-19S4PO:after {
+    background: -webkit-gradient(linear,left top,right top,from(rgba(56, 0, 77, 0)),to(#38004d));
+    background: linear-gradient(90deg,rgba(56, 0, 77,0) 0,#38004d);
+}
+
+/* Discord - Main - roundButton Activated (like in < 1 2 3 4 ... > slider) */
+.theme-dark .activeButton-1BJAiN, .theme-dark .activeButton-1BJAiN:hover {
+    color: #fff;
+    background-color: rgba(77, 0, 102, 0.9);
+}
+
+/* Add Server - Cards Background */
+.bda-dark .theme-dark .action-1lSjCi, .bda-dark {
+    background: #1e002f;
+}
+
+/* Some cards / background / etc general background to transparent. Need better sort this out later */
+.guilds-wrapper, .wrapper-1Rf91z, .activityFeed-1C0EmJ, .root-1BQpZw, .card-GqTca8, .body-1BpgWG, .topSectionNormal-2-vo2m, .topSectionPlaying-1J5E4n {
+	background-color: rgba(0, 0, 0, 0) !important;
+}
+
+/* Right Click Context Menu */
+.contextMenu-HLZMGh {
+	background-color: rgba(56, 0, 77, 0.9) !important;
+}
+
+/* Right Click Context Menu Item Selection Hover */
+.item-1Yvehc:hover {
+	background-color: rgba(38, 0, 77, 1) !important;
+}
+
+/* Activity Cards - Background */
+.card-GqTca8 {
+	background-color: rgba(77, 0, 102, 0.6) !important;
+}
+
+/* Activity Cards - Claim Free Loot Background - Radiant*/
+.card-GqTca8 .coloredBackground-37Z6Gv {
+    background: url(/assets/0858a33….svg) no-repeat 100% 0,linear-gradient(270.22deg,#637ff1 .09%,#1e002f 99.55%);
+    opacity: 1%;
+}
+
+/* Channels Highlights Background color and hover color in "NOW PLAYING" list */
+.inset-SbsSFp, .da-inset, .popoutContainer-3WC9HR:hover, .carouselItem-1qFCGP, .description-2oYgWO {
+	background-color: rgba(37, 0, 51, 0.6) !important;
+}
+
+/* Background color of "NOW PLAYING" popout */
+.popout-3G62UL, .da-popout {
+	background-color: rgba(56, 0, 77, 0.9) !important;
+}
+
+/* hover of selectable items in "NOW PLAYING" popout */
+.da-enabled:hover, .content-3at_AU:hover, .content-OzHfo4:hover {
+	background-color: rgba(30, 0, 45, 0.7) !important;
+}
+
+/* server channels, server members, etc. hovers */
+.content-3at_AU:hover, .content-OzHfo4:hover, .channel-2QD9_O a:hover, .channel-2QD9_O.selected-1HYmZZ a, .wrapper-1ucjTd.modeSelected-1zApJ_ .content-3at_AU {
+	background-color: rgba(38, 0, 77, 1) !important;
+}
+
+/* Members info when clicked (with and without when playing) */
+.footer-1fjuF6, .headerPlaying-j0WQBV, .note-3kmerW, .note-3kmerW textarea, .quickMessage-2XpSaN, .headerNormal-T_seeN, .header-QKLPzZ {
+	background-color: var(--background-color-dark-purple);
+}
+
+/* Profile Banner Top */
+.banner-2QYc2d {
+	background-color: var(--background-color-dark-purple) !important;
+}
+
+/* Profile Banner Note Text Area */
+.textarea-2r0oV8 {
+	background-color: var(--background-color-dark-purple-semi);
+	box-sizing: border-box;
+	border: 1px solid;
+	border-color: var(--deprecated-text-input-border);
+}
+
+/* Profile Banner Note Text Area Focused */
+.textarea-2r0oV8:focus {
+	background-color: var(--background-color-dark-purple-semi-focus);
+}
+
+/* playing activity in profile */
+.activityProfile-2bJRaP {
+	background-color: rgba(30, 0, 45, 0.9) !important;
+}
+
+/* Buttons background Filled*/
+.lookFilled-yCfaCM {
+	background-color: var(--background-button-filled) !important;
+}
+
+/* Profile Send Message Button Inverted*/
+.lookInverted-2D7oAl.colorBrand-3pXr91 {
+	background-color: var(--brand-experiment);
+	color: var(--background-color-send-message-button);
+}
+
+/* Tab bar (User info, mutual server, mutual friends) */
+.tabBarContainer-1s1u-z, .body-3iLsc4 {
+	background-color: rgba(56, 0, 77, 0.7) !important;
+}
+
+/* Footer normal profile */
+.body-3ND3kc {
+	background-color: rgba(30, 0, 45, 0.7) !important;
+}
+
+.private-channels, .search-2oPWTC {
+    background: none !important;
+}
+
+.friendsTableHeader-32yE7d, .friendsTable-133bsv, .container-3gCOGc, .stickyHeader-1pqx0j, .section-2VKIPC {
+    background: none !important;
+}
+
+/* Embed settings */
+.embedFull-2tM8-- {
+	border-color: var(--embed-left-color) !important;
+	border-left: 4px solid var(--embed-left-color) !important;
+	background: var(--embed-background-color) !important;
+}
+
+/* Settings - Notification - List Selected */
+.lookFilled-1GseHa.select-1Ia3hD {
+	background-color: var(--background-color-dark-purple);
+}
+
+/* Forum Guidelines Text Area Background */
+.textArea-2CLwUE {
+	background-color: var(--background-color-purple-core);
+}
+
+/* Forum Guidelines Main Text Area Box Background Color */
+.forumGuidelines-1U9ThN {
+	background-color: var(--background-color-purple-header);
+}
+
+/* No Save Warning */
+.container-20TyK0 {
+	background-color: var(--background-color-purple-full) !important;
+}
+
+/* Bio Text Area Background */
+.bioTextArea-dDGOeC {
+	background-color: var(--background-color-purple);
+}
+
+/*
+########
+# Home #
+########
+*/
+
+/* Main background */
+.theme-dark .background-fkKrXt {
+	background-color: var(--background-color-dark-purple);
+}
+
+/* Secondatry background */
+/*.homeContent-2_a0jF {
+	background-color: var(--background-color-dark-purple);
+}*/
+
+/* Main Header / works for Channels & Roles too */
+.container-ZMc96U.themed-Hp1KC_ {
+	background-color: var(--background-color-purple-header);
+}
+
+/* Widget/Info background */
+.widgets-37sQdc {
+	background-color: var(--background-color-dark-purple);
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
+
+/* Your Highlights background */
+.topMessagesHeader-3Yn7J0 {
+	background-color: var(--background-color-purple-header);
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
+
+/* Channel header */
+.feedItemHeader-txJq98 {
+	background-color: var(--background-color-purple-header);
+}
+
+/* Message background color */
+.messageBundleItemBody-F-Xlra, .interactiveCard-2iMtdk {
+	background-color: var(--background-color-purple);
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
+
+/*
+####################
+# Channels & Roles #
+####################
+*/
+
+/* Main Header in Home config as they're shared for now */
+
+/* Main Background color (bannerwith tabs) */
+.theme-dark .container-2IKOsH {
+	background-color: var(--background-color-purple);
+}
+
+/* Main Secondary Background (Customize tab)*/
+.theme-dark .emptyPage-2TGR7j, .theme-dark .scrollerContainer-y16Rs9 {
+	background-color: var(--background-color-dark-purple);
+}
+
+/* Category Background (Customize tab)*/
+.prompt-1sE27N {
+	background-color: var(--background-color-purple);
+}
+
+/* Maion background color (Browse Channels) */
+.header-2e2w0L, .pageBody-23bo4p, .theme-dark .container-1um7CU {
+	background-color: var(--background-color-dark-purple);
+}
+
+/* Main secondary background (Browse Channels) */
+.scrollerInner-1kQEqs {
+	background-color: var(--background-color-dark-purple);
+}
+
+/* Category background (Browse Channels) */
+.categoryRow-2VIZ6m {
+	background-color: var(--background-color-purple-header);
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+
+/* Channels background (Browse Channels) */
+.channelRow-4X_3fi {
+	background-color: var(--background-color-purple);
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
+
+/* Choose your channel banderol (shows first time then you can close it) */
+.container-27tlK1, .nuxContent-2OA4ud {
+	background-color: var(--background-color-purple-header);
+}
+
+/* Profile */
+.profileCard-2gVmvm {
+	background-color: var(--background-color-purple);
+}
+
+/*
+#######################
+# Server Boost Status #
+#######################
+*/
+/* Tiers Backgrounds - Headers */
+.tierHeaderContent-2SPBAA {
+	background-color: var(--background-color-purple-header);
+}
+
+/* Tiers Backgrounds - Body */
+.theme-dark .tierBody-1d3UiS {
+	background-color: var(--background-color-purple-core);
+}
+
+/*
+############
+# Switches #
+############
+*/
+/* Uncheck Setting (global) */
+.container-2nx-BQ {
+	background-color: var(--background-color-purple) !important;
+}
+
+/* Checked Setting (global)*/
+/* Disabled custom color - default one is fine. Uncomment to edit */
+.checked-25WXMf {
+	background-color: var(--switch-checked-green) !important;
+}
+
+/*
+###########
+# Billing #
+###########
+*/
+/* Settings - Billing */
+.theme-dark .paymentPane-ut5qKZ {
+	background-color: var(--background-color-purple-header);
+}
+
+.paymentRowHeader-3WJnOv {
+	background-color: var(--background-color-purple-header);
+}
+
+.paymentRow-1HKOLu {
+	background-color: var(--background-color-purple-header);
+}
+
+.theme-dark .bottomDivider-ZmTm-j {
+	background-color: var(--background-color-purple-header);
+	border-bottom-color: var(--background-color-purple);
+}
+
+.theme-dark .hoverablePayment-lE1s4t {
+	background-color: var(--background-color-purple-header);
+}
+
+.theme-dark .hoverablePayment-lE1s4t:hover {
+	background-color: var(--background-color-purple-core);
+}
+
+.pageActions-1crTQL {
+	background-color: var(--background-color-purple-header);
+}
+
+.theme-dark .codeRedemptionRedirect-2hYMSQ {
+	background-color: var(--background-color-purple-header);
+}
+
+.theme-dark .expandedInfo-1W31i3 {
+	background-color: var(--background-color-purple-core);
+}
+
+/*
+##########
+# Widget #
+##########
+*/
+/* Input Boxes */
+.theme-dark .hiddenMessage-3QNvPt, .theme-dark .inputDefault-1AaKiD {
+	background-color: var(--background-color-text-box);
+}
+
+/* Input Frame */
+.theme-dark .copyInputDefault-3jiMHw {
+	background-color: var(--background-color-purple);
+}
+
+/*
+########
+# Gift #
+########
+*/
+/* Gift - Redeem Box */
+.input-2g-os5 {
+	background-color: var(--background-color-text-box);
+}
+
+/* ===================================================== */
+/* Scrollbar First Colors*/
+.scroller-kQBbkU::-webkit-scrollbar-thumb {
+	border:none !important;
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0), rgb(71, 0, 229), rgba(0, 0, 0, 0)) !important;
+}
+
+.scroller-kQBbkU::-webkit-scrollbar-thumb {
+	border:none !important;
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0), rgb(71, 0, 229), rgba(0, 0, 0, 0)) !important;
+}
+
+/* Scrollbar Secondary Colors*/
+.scroller-kQBbkU::-webkit-scrollbar-track {
+    background: linear-gradient(0deg, rgba(71, 0, 229, 0.4) 0%, rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 0) 95%, rgba(71, 0, 229, 0.4) 100%) !important;
+}
+/* Scrollbar Width */
+.scroller-kQBbkU::-webkit-scrollbar {
+    width: 7px !important;
+}
+/* Another Scrollbar Thingy*/
+.scroller-kQBbkU::-webkit-scrollbar-track-piece {
+	border: none !important;
+	background: none !important;
+}
+
+/* Friends Scrollbar settings, same as above */
+.auto-2K3UW5::-webkit-scrollbar-thumb {
+	border:none !important;
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0), rgb(71, 0, 229), rgba(0, 0, 0, 0)) !important;
+}
+.auto-2K3UW5::-webkit-scrollbar-track {
+    background: linear-gradient(0deg, rgba(71, 0, 229, 0.4) 0%, rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 0) 95%, rgba(71, 0, 229, 0.4) 100%) !important;
+}
+.auto-2K3UW5::-webkit-scrollbar {
+    width: 7px !important;
+}
+.auto-2K3UW5::-webkit-scrollbar-track-piece {
+	border: none !important;
+	background: none !important;
+}
+
+/* Scrollbar from News / Changelog window / Server list*/
+.scrollerBase-_bVAAt::-webkit-scrollbar-thumb {
+	border:none !important;
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0), rgb(71, 0, 229), rgba(0, 0, 0, 0)) !important;
+}
+.scrollerBase-_bVAAt::-webkit-scrollbar-track {
+    background: linear-gradient(0deg, rgba(71, 0, 229, 0.4) 0%, rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 0) 95%, rgba(71, 0, 229, 0.4) 100%) !important;
+}
+.scrollerBase-_bVAAt::-webkit-scrollbar {
+    width: 4px !important;
+}
+.scrollerBase-_bVAAt::-webkit-scrollbar-track-piece {
+	border: none !important;
+	background: none !important;
+}
+.scroller-1ox3I2::-webkit-scrollbar-thumb {
+	border:none !important;
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0), rgb(71, 0, 229), rgba(0, 0, 0, 0)) !important;
+}
+
+.scroller-1ox3I2::-webkit-scrollbar-thumb {
+	border:none !important;
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0), rgb(71, 0, 229), rgba(0, 0, 0, 0)) !important;
+}
+
+/* Scrollbar Secondary Colors*/
+.scroller-1ox3I2::-webkit-scrollbar-track {
+    background: linear-gradient(0deg, rgba(71, 0, 229, 0.4) 0%, rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 0) 95%, rgba(71, 0, 229, 0.4) 100%) !important;
+}
+/* Scrollbar Width */
+.scroller-1ox3I2::-webkit-scrollbar {
+    width: 7px !important;
+}
+/* Another Scrollbar Thingy*/
+.scroller-1ox3I2::-webkit-scrollbar-track-piece {
+	border: none !important;
+	background: none !important;
+}
+
+/* ===================================================== */
+
+/* Channels section */
+.channels-wrap, .flex-1xMQg5 {
+	background: none !important;
+}
+
+/* New Stuff : Store, Game Library, etc... */
+.gameLibrary-TTDw4Y, .applicationStore-1pNvnv {
+	background: none !important;
+}
+
+/*
+######################
+# Slash Command List #
+######################
+*/
+
+/* Slash command list - Main list */
+.scroller-2MALzE {
+	background-color: var(--background-color-purple-header);
+}
+
+/* Slash command list - Header */
+.categoryHeader-OpJ1Ly {
+	background-color: var(--background-color-purple-header);
+}
+
+/* Slash command list - Selection hover */
+.theme-dark .selected-3H3-RC {
+	background-color: var(--background-color-purple);
+}
+
+/* Slash command list - Command option background */
+.theme-dark .option-Tt7anD {
+	background-color: var(--background-color-purple-header);
+}
+
+/*
+##########
+# Forums #
+##########
+*/
+
+.theme-dark .container-3wLKDe {
+	background-color: var(--background-color-purple-header);
+}
+
+.header-1Uy0p6 {
+	background-color: var(--background-color-purple-core) !important;
+}
+
+.mainCard-3KBsBI {
+	background-color: var(--background-color-purple);
+}
+
+/*
+###########
+# Threads #
+###########
+*/
+
+/* Thread Popup From Channel List */
+.popout-TdhJ6Z {
+	background-color: var(--background-floating);
+}
+
+/* Thread Popup From Channel List - hover */
+.row-1qtctT:hover {
+	background-color: var(--background-color-purple-core);
+}
+
+/* Thread Popup Full List - Background */
+.focusLock-2tveLW {
+	background-color: var(--background-color-dark-purple);
+}
+
+/* Thread Popup Full List - Header Background */
+.header-3_zmOb {
+	background-color: var(--background-color-purple-header);
+}
+
+/* Thread Popup Full List - Item List Background */
+.list-1uSVgu {
+	background-color: var(--background-color-purple-core);
+}
+
+/* Thread Popup Full List - Item Hover Background */
+.container-2rzKKA:hover {
+	background-color: var(--background-color-dark-purple);
+}
+
+/*
+################
+# CALL + VIDEO #
+################
+*/
+
+/* General Background for voice, video and screen sharing */
+.theme-dark .wrapper-29NfPK {
+    background-color: rgba(30, 0, 45, 0.9);
+}
+
+/*
+#########
+# NITRO #
+#########
+*/
+
+/* Nitro - Carousel Background (carouselItem-1qFCGP is already globaly defined, specifying that for the nitro one, we want background as none here) */
+.carouselContainer-1cw6QH .carouselItem-1qFCGP {
+	/*background: rgba(37, 0, 51, 0.6) !important;*/
+	background: none !important;
+}
+
+/* Nitro - Carousel Side Effects */
+.theme-dark .itemBackground-2vEldQ:before {
+    background: radial-gradient(ellipse at top,rgba(56,0,77,0),#38004d),-webkit-gradient(linear,left top,right top,from(#38004d),color-stop(40%,rgba(56,0,77,0)),color-stop(60%,rgba(56,0,77,0)),to(#38004d)),-webkit-gradient(linear,left bottom,left top,from(#36393f),color-stop(25%,rgba(56,0,77,0)));
+    background: radial-gradient(ellipse at top,rgba(56,0,77,0),#38004d),linear-gradient(90deg,#38004d 0,rgba(56,0,77,0) 40%,rgba(56,0,77,0) 60%,#38004d),linear-gradient(0deg,#38004d 0,rgba(56,0,77,0) 25%);
+}
+
+/* Nitro - Carousel Side Effects */
+/* (Appears 2x in the elements in inspector but only the first one (above) is needed. If this one is activated too, the gradient is too dark then) */
+/*.theme-dark .itemBackground-2vEldQ:before {
+    background: radial-gradient(ellipse at top,rgba(56,0,77,0),#461f54),-webkit-gradient(linear,left top,right top,from(#461f54),color-stop(40%,rgba(56,0,77,0)),color-stop(60%,rgba(56,0,77,0)),to(#461f54)),-webkit-gradient(linear,left bottom,left top,color-stop(10%,#36393f),color-stop(70%,rgba(56,0,77,0)));
+    background: radial-gradient(ellipse at top,rgba(56,0,77,0),#461f54),linear-gradient(90deg,#461f54 0,rgba(56,0,77,0) 40%,rgba(56,0,77,0) 60%,#461f54),linear-gradient(0deg,#461f54 10%,rgba(56,0,77,0) 70%);
+}*/
+
+/* Nitro - Game List Border Grandient - Right */
+.theme-dark .gradientOverlayRight-3vMuS8 {
+    background-image: -webkit-gradient(linear,left top,right top,from(rgba(56,0,77,0)),to(#38004d));
+    background-image: linear-gradient(90deg,rgba(56,0,77,0),#38004d);
+}
+ /* Nitro - Game List Border Grandient - Left */
+.theme-dark .gradientOverlayLeft-3w159C {
+    background-image: -webkit-gradient(linear,left top,right top,from(#38004d),to(rgba(56,0,77,0)));
+    background-image: linear-gradient(90deg,#38004d,rgba(56,0,77,0));
+}
+
+/* Nitro - Game Description - Caroussel */
+.theme-dark .item-3V15ea {
+    background-color: rgba(30, 0, 45, 0.6);
+}
+
+/* Nitro - Game Description - Why you may like it - Background */
+.theme-dark .root-1bFE0x {
+    background-color: RGBA(77, 0, 102, 0.6);
+}
+
+/* Nitro - Game Description - Latest news - Background */
+.theme-dark .item-2yFVoY {
+    background-color: rgba(77, 0, 102, 0.6);
+}
+
+/* Nitro - Game Description - In Library - Header - Background */
+.theme-dark .entitledHeader-3LRNDT, .theme-light .entitledHeader-3LRNDT {
+    background-color: rgba(30, 0, 45, 0.6);
+}
+
+/* Nitro - Game Description - In Library - Game info (Get Game) - Background */
+.theme-dark .bodySection-jqkkIP, .theme-light .bodySection-jqkkIP {
+    background-color: rgba(56, 0, 77, 0.6);
+}
+
+/* Nitro - Game Description - Verified Discord Server - Background */
+.theme-dark .content-35aVm0 {
+    background-color: rgba(56, 0, 77, 0.6);
+}
+
+/* Nitro - Game Description - Features - Background */
+.theme-dark .row-1bU71H {
+    background-color: rgba(56, 0, 77, 0.6);
+}
+
+/*
+###########
+# LIBRARY #
+###########
+*/
+
+/* Library - Header background */
+/*.theme-dark .libraryHeader-3g95kE {
+	background: rgba(30, 0, 45, 0.9) !important;
+}*/
+
+/* Library - Column Name Background */
+/*.theme-dark .header-39GIC8 {
+	background: rgba(56, 0, 77, 0.9) !important;
+}*/
+
+/* Library - Game Update*/
+.gameUpdates-2GPqBU{
+	background: none !important;
+}
+
+/* Library - Game Update - Network/Disk background */
+.headerRow-2xTwL8 {
+	background: rgba(30, 0, 45, 0.9) !important;
+}
+
+/* Library - Game Update - Network/Disk - Game Name background */
+.table-2BOVTY {
+	background: rgba(56, 0, 77, 0.9) !important;
+}
+
+/* Library - Hover */
+.theme-dark .rowWrapperActive-2L7i9f {
+	background-color: rgba(56, 0, 77, 0.3);
+}
+
+/* Library buttons */
+.topPill-30KHOu .item-PXvHYJ {
+	background: rgba(38, 0, 77, 0.9) !important;
+}
+
+/* Library - Game Selected (after click on it) - Friends playing it */
+.theme-dark .emptyPlayers-dx3qig, .theme-dark .players-1zg2l8 {
+    background: rgba(30, 0, 45, 0.9) !important;
+}
+
+/* Library - Game Selected (after click on it) - Grandient on Image */
+.theme-dark .news-2KwXHF {
+    background: rgba(56, 0, 77, 0.9) !important;
+}
+
+/* Library - Game Selected (after click on it) - Footer */
+.theme-dark .footer-3J5oP4 {
+    background: rgba(56, 0, 77, 0.9) !important;
+}
+
+/* Library Filter Border Radius */
+.libraryFilter-1nwg6T {
+	border-radius: 8px;
+}
+
+/*
+################
+# SERVER BOOST #
+################
+*/
+
+/* Server Boost Status - Background */
+.modal-yWgWj-, .modal-c2O6Xq {
+	background: rgba(30, 0, 45, 0.9) !important;
+}
+
+/* Server Boost Status - Border Edge Left */
+.carouselLeftGradientEdge-3P4spl, .theme-dark .carouselLeftGradientEdge-3P4spl {
+    background-image: -webkit-gradient(linear,left top,right top,from(#38004d),to(rgba(30,0,45,0)));
+    background-image: linear-gradient(90deg,#38004d,rgba(56,0,77,0));
+}
+
+/* Server Boost Status - Border Edge Right */
+.carouselRightGradientEdge-2Z3H8D, .theme-dark .carouselRightGradientEdge-2Z3H8D {
+	background-image: -webkit-gradient(linear,right top,left top,from(#38004d),to(rgba(30,0,45,0)));
+    background-image: linear-gradient(270deg,#38004d,rgba(56,0,77,0));
+}
+
+/* Server Boost Status - Header Locked */
+.tierHeaderLocked-1s2JJz {
+	background: rgba(26, 0, 51, 0.9) !important;
+}
+
+/* Server Boost Status - Tier body */
+.tierBody-16Chc9 {
+	background: rgba(38, 0, 77, 0.9) !important;
+}
+
+/*
+#################
+# SERVER FINDER #
+#################
+*/
+
+/* Server Finder - Background */	
+.theme-dark .pageWrapper-1PgVDX {
+    background-color: rgba(30, 0, 45, 0.9);
+}
+/* Server Finder - Cards - Background */
+.theme-dark .card-3DjzTQ, .theme-dark .cardPlaceholder-1zrbbe {
+    background: rgba(56, 0, 77, 0.6);
+}
+
+/* Server Finder - Search box */
+.theme-dark .searchBox-3Y2Vi7 {
+    background-color: rgba(56, 0, 77, 0.9);
+}
+
+/* Server Finder - Search box */
+.searchBox-3Y2Vi7 .searchBoxInput-uJtBcv {
+    background: rgba(56, 0, 77, 0.6);
+}
+/* Server Finder - Search box - Language - Box Background */
+.css-1wqqa50-container {
+    background-color: rgba(56, 0, 77, 0.6);
+}
+
+/* Server Finder - Search box - Language - List - Background */
+.css-1rckt42-menu {
+    background-color: rgba(56, 0, 77, 0.9);
+}
+
+/* Server Finder - Search box - Language - List - Item Background*/
+.css-1aymab5-option {
+    background-color: rgba(56, 0, 77, 0.6);
+}
+
+/* Server Finder - Search box - Language - List - Item Hover*/
+.css-1gnr91b-option {
+    background-color: rgba(30, 0, 45, 0.6);
+}
+
+/* Server Finder - Search box - Language - List - Selected Item */
+.css-12o7ek3-option {
+    background-color: rgba(30, 0, 45, 0.6);
+}
+
+/*
+#########
+# CODES #
+#########
+*/
+
+/* ``` Code (HLJS) */
+.hljs {
+    background:  rgba(91, 187, 255, 0.2) !important;
+    border: 1px solid rgba(91, 187, 255, 0.4) !important;
+    border-radius: 5px !important;
+}
+/* pre markup */
+.markup > pre {
+    background: none !important;
+    border: none !important;
+}
+
+/* `` (`test`) Code (Inline) */
+.inline
+{
+    background:  rgba(2, 132, 108, 1) !important;
+}
+
+/*
+###########
+# FRIENDS #
+###########
+*/
+
+/* Background Friends List */
+.theme-dark .container-1D34oG, .theme-dark .container-2cd8Mz {
+	background: var(--background-friends);
+}
+
+/* DM Friends Menu */
+.btn-friends > a {
+    background: none !important;
+    border: 2px solid rgba(41, 137, 216, 0.3) !important;
+}
+/* Same */
+.btn-friends.selected > a {
+    background: none !important;
+    border: 2px solid rgba(101, 197, 276, 0.5) !important;
+}
+
+/* Friends - Hover */
+.theme-dark .friendsTable-133bsv .friendsRow-2yicud:hover {
+    background: rgba(56, 0, 77, 0.3);
+    border-color: transparent;
+}
+
+/* Friends Buttons Right */
+.friends-action {
+    background-color: rgba(38, 0, 77, 0.9) !important;
+}
+
+/* Friends Top Bar Selected Item */
+.item-3HpYcP, .item-3HpYcP.selected, .itemSelected-1qLhcL, .primary-3j8BhM, .tab-bar-item.selected, .tab-bar-item-primary {
+    background: rgba(38, 0, 77, 0.9) !important;	
+}
+
+/* Friends Icon */
+.friends-icon {
+    background-color: rgb(1, 97, 176) !important;
+}
+/* Same But Hover */
+.friends-icon:hover {
+    background-color: rgb(41, 137, 216) !important;
+}
+
+/* Active Now Active Selection Background */
+.theme-dark .outer-1AjyKL.active-1xchHY, .theme-dark .outer-2JOHae.active-1W_Gl9 {
+	background: rgba(56, 0, 77, 0.8) !important
+}
+/* Active Now Hover Selection Background */
+.theme-dark .outer-1AjyKL.interactive-3B9GmY:hover, .theme-dark .outer-2JOHae.interactive-2zD88a:hover {
+	background: rgba(56, 0, 77, 0.5) !important
+}
+
+/* Search servers, channels, DM - Input Background */
+.input-3r5zZY {
+	background-color: var(--background-inbox);
+}
+
+/*
+################
+# USER PROFILE #
+################
+*/
+
+/* User Profile Popout Top */
+.headerNormal-1cioxU {
+    background: rgb(41, 137, 216) !important;
+}
+/* User Profile Popout Profile Border */
+.avatar-16XVId {
+    border-color: rgb(101, 197, 255) !important;
+}
+/* User Profile Popout Middle */
+.body-3rkFrF {
+    background: rgb(60, 60, 60) !important;
+    box-shadow: 0 -6px 6px rgba(0, 0, 0, 0.2) !important;
+    border: none !important;
+}
+/* User Profile Popout Down */
+.footer-2J5zqP {
+    background: rgb(60, 60, 60) !important;
+}
+/* User Profile Note */
+.note > textarea:focus {
+    background: rgb(60, 60, 60) !important;
+}
+
+/* Background Role Selection From User Card (left click on name in chat) */
+.container-2O1UgZ {
+	background-color: var(--background-color-dark-purple-full);
+	border-radius: 8px;
+}
+
+/* Background Role Selection From User Card (left click on name in chat) - Items */
+.item-1BCeuB {
+	background-color: var(--background-color-purple);
+}
+
+/* Background Role Selection From User Card (left click on name in chat) - Core */
+.combobox-3_6kOi {
+	background-color: var(--background-color-dark-purple);
+	border-radius: 8px;
+}
+
+/*
+###############
+# MEMBER LIST #
+###############
+*/
+
+/* Member List Hover */
+.channel-members > .member:hover {
+    background: linear-gradient(90deg, rgba(91, 187, 255, 0.6), rgba(0, 0, 0, 0)) !important;
+}
+
+/*
+########
+# NFSW #
+########
+*/
+
+/* NSFW Section */
+.buttonBrandFilledDefault-2Rs6u5
+{
+    background-color: rgb(41, 137, 216) !important;
+}
+
+.buttonPrimaryOutlinedDefault--H0hhk
+{
+    border-color: rgb(41, 137, 216) !important;
+    color: rgb(41, 137, 216) !important;
+}
+
+.title-SL0Wts
+{
+    color: rgb(41, 137, 216) !important;
+}
+/* End NSFW */
+
+/*
+##########
+# SEARCH #
+##########
+*/
+
+/* Search - Search Box Top Left From Home*/
+.theme-dark .quickswitcher-3JagVE {
+    background-color: rgba(30, 0, 45, 0.9);
+    color: #dcddde;
+}
+
+/* Search - Search Box Top Left From Home - Input */
+.theme-dark .input-2VB9rf {
+    background-color: rgba(56, 0, 77, 0.9);
+    color: #fff;
+}
+
+/* Search - Search Box Top Left From Home - Result Hover */
+.theme-dark .resultFocused-3aIoYe {
+    background-color: rgba(56, 0, 77, 0.6);
+}
+
+/* Search - Search Box Top Left From Home - Buttons */
+.theme-dark .keybindShortcut-1BD6Z1 span {
+	box-shadow: inset 0 -4px 0 rgba(56, 0, 77, 0.6);
+    background-color: #4d0066;
+}
+
+/* Search Bar "outer" */
+.searchBar-jGtisZ {
+	background: var(--background-search-box);
+	border-radius: 6px;
+}
+
+/* Serach Bar "inner" */
+.DraftEditor-root {
+	background: var(--background-search-box);
+	border-radius: 8px;
+}
+
+/* Search Bar Options Main Background */
+.theme-dark .container-2McqkF {
+	background: var(--background-transparent);
+	border-radius: 8px;
+}
+
+/* Search Bar Options Section Background (Search Options / History - shared background) */
+.theme-dark .resultsGroup-cfY57t {
+	background: var(--background-search-box-options);
+	border-radius: 8px;
+}
+
+/* Search Bar Options Box Shadow - 0 0 0 1px rgba(30, 0, 45, 1) */
+.theme-dark .elevationBorderHigh-3drnJX {
+	box-shadow: none;
+}
+
+/* Search Bar Options "items" */
+.option-ayUoaq:after, .theme-dark .option-ayUoaq:after {
+	background: var(--background-transparent);
+}
+
+/* Search Bar Options "items" Selected */
+.theme-dark .option-ayUoaq[aria-selected=true] {
+	background-color: var(--background-modifier-selected);
+}
+
+/**/
+.theme-dark .option-ayUoaq[aria-selected=true]:after {
+	background: var(--background-transparent);
+}
+
+/* Search - Search Box Top Right - Popout - Hover */
+.theme-dark .option-96V44q.selected-rZcOL- {
+	background-color: rgba(30, 0, 45, 0.6);
+}
+
+/* Search - Search Box Top Right - Popout - Grandient Right Side */
+.theme-dark .option-96V44q:after {
+    background: -webkit-gradient(linear,left top,right top,from(rgba(56, 0, 77, 0)),color-stop(80%,#38004d));
+    background: linear-gradient(90deg,rgba(56, 0, 77, 0),#38004d 80%);
+}
+
+/* Search - Search Box Top Right - Popout - Gradient Right Side Arround "+" */
+.theme-dark .option-96V44q.selected-rZcOL-:after {
+    background: -webkit-gradient(linear,left top,right top,from(rgba(56, 0, 77, 0)),color-stop(50%,#38004d));
+    background: linear-gradient(90deg,rgba(56, 0, 77, 0),#38004d 50%);
+}
+
+/* Search - Search Box Top Right - Results - Background */
+.theme-dark .searchResultsWrap-5RVOkx {
+    background-color: var(--background-color-dark-purple-full);
+    border-radius: 8px;
+}
+
+/* Search - Search Box Top Right - Results - Header */
+.theme-dark .searchHeader-1r_ZSh {
+    background-color: var(--background-color-purple-header);
+}
+
+/*Search - Search Box Top Right - Results - Blocks*/
+.searchResultGroup-1lU_-i {
+	background-color: var(--background-color-purple);
+	border-radius: 8px;
+}
+
+/* Search - Search Box Top Right - Results - Channel Name */
+.theme-dark .channelName-3w2Y3c {
+    background-color: var(--background-color-purple-header);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+/* Search - Search Box Top Right - Results - Result Messages Second Background */
+.theme-dark .searchResult-O9NDji {
+    background-color: var(--background-color-purple-header);
+    border-radius: 8px;
+}
+
+/* Search - Search Box Top Right - Results - Result Messages Second Background Hover */
+.theme-dark .searchResult-O9NDji:hover {
+    background-color: var(--background-color-dark-purple);
+    border-radius: 8px;
+}
+
+/* Search - Search Box Top Right - Query */
+.theme-dark .queryContainer-ZunrLZ {
+	background-color: var(--background-color-dark-purple-full);
+}
+
+/* Search - Search Box Top Right - Query */
+.theme-dark .focused-2FU0YH {
+	background-color: var(--background-color-dark-purple-full);
+}
+
+/**/
+.theme-dark .dim-2Uxgxb span {
+	background-color: var(--background-button-filled);
+}
+
+/**/
+.theme-dark .keybindShortcut-3zF1P9 span {
+	box-shadow: inset 0 -4px 0 var(--background-color-purple-core);
+}
+
+/*
+############
+# MENTIONS #
+############
+*/
+
+/* Mentions - Recent Mentions - Header Background */
+.theme-dark .header-ykumBX {
+    background-color: rgba(30, 0, 45, 0.96);
+}
+
+/* Mentions - Recent Mentions - Background */
+.theme-dark .messagesPopoutWrap-1MQ1bW {
+    background-color: rgba(30, 0, 45, 0.9);
+}
+
+/* Mentions - Recent Mentions - Messages Background */
+.theme-dark .messageGroupWrapper-o-Zw7G {
+    background-color: rgba(56, 0, 77, 0.9);
+}
+
+/*
+##############################
+# Add Server & Public Server #
+##############################
+*/
+
+/* Server Add & Public Server Button Color */
+.circleIconButton-1VxDrg {
+	color: var(--background-color-purple-core) !important;
+}
+
+/* Server Add & Public Server Button Color - Hover */
+.circleIconButton-1VxDrg.selected-2r1Hvo {
+	background-color: var(--background-transparent);
+	color: var(--background-color-standard-hover) !important;
+}
+
+/* Sections */
+.container-x8Y1ix {
+	background-color: var(--background-color-purple-core);
+}
+
+/* Forcing the Dark theme color scheme as discord is wrongly using light theme for the server add window */
+
+/* Section's Text Color */
+.colorStandard-21JIj7 {
+	color: var(--text-normal-dark);
+}
+
+/* Main Title Color */
+.base-21yXnu {
+	color: var(--header-primary-dark);
+}
+
+/* Secondary Text color */
+.colorHeaderSecondary-g5teka {
+	color: var(--header-secondary-dark);
+}
+
+/* Back "Button" Text */
+/*
+/!\ This is bugged for now, with a mix of light and dark theme from discord and the value impacting several other text/icons
+(+ sign next to channel, icons next to profile name, gif/sticker/emoji icon)
+
+.contents-3ca1mk {
+	color: var(--channels-default);
+}
+*/
+
+/* Discover - Main Background */
+.pageWrapper-2PwDoS {
+	background-color: var(--background-color-dark-purple) !Important;
+}
+
+/* Discover - Server Card Hover */
+.loaded-igpmmx:hover {
+	background-color: var(--background-color-purple);
+}
+
+/* Discover - Search Bar Background */
+.search-25t1e9 .searchBox-31Zv9h {
+	background-color: var(--background-color-dark-purple);
+}
+
+/* Discover - Search Bar Input Text Color */
+.search-25t1e9 .searchBox-31Zv9h .searchBoxInput-3h4etz {
+	color: var(--text-normal);
+}
+
+/* Discover - Search Bar Input Text "Hint" Color */
+.colorMuted-20987_ {
+	color: var(--text-normal-dark);
+}
+
+.categoryItem-Kc_HK_.selectedCategoryItem-ZjqSui .itemInner-3e_4G4 {
+	background-color: var(--background-modifier-selected);
+}
+
+/*
+##########
+# OTHERS #
+##########
+*/
+
+/* Reaction Picker In Message - Background */
+.wrapper-2vIMkT {
+	background-color: var(--background-color-reaction-picker);
+}
+
+/* DM Add Friend List Hover/Selected */
+.theme-dark .friendSelected-3cwmD7 {
+	background-color: var(--background-color-purple);
+}
+
+/* Top Bar, Bottom Bar, Messages, Member List, Form, Channels */
+.content-yTz4x3, .chat-3bRxxu, .messagesWrapper-3lZDfY, .scroller-2FKFPG, form, .channels-Ie2l6A, .members-1998pB {
+    background: none !important;
+	/*background-color: rgba(0, 0, 0, 0) !important;*/
+}
+
+/* Selected Text Chanel */
+.contentSelectedText-3wUhMi {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(41, 137, 216, 0.4)) !important;
+}
+/* Selected Text Chanel Hovered */
+.contentSelectedText-3wUhMi:hover {
+    background: linear-gradient(90deg, rgba(91, 187, 255, 0.6), rgba(41, 137, 216, 0.4)) !important;
+}
+/* Hovered Text Channel */
+.contentHoveredText-2HYGIY {
+    background: linear-gradient(90deg, rgba(91, 187, 255, 0.6), rgba(0, 0, 0, 0)) !important;
+}
+
+/* Unread Messages */
+.unread-1Dp-OI {
+    position: absolute;
+    left: 10px;
+    top: 30px;
+    height: 1px;
+    width: 90%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0), rgb(133, 79, 255), rgba(0, 0, 0, 0));
+    opacity: 1 !important;
+    animation: unread 3s ease-out infinite !important;
+}
+
+.guild.unread:before {
+    background: rgba(91, 187, 255, 0.7) !important;
+    animation: unread 3s ease-out infinite !important;
+}
+
+/* Mentions Indicator */
+.wrapper-232cHJ, .badge {
+    background: rgb(41, 137, 216);
+    animation: mentions 3s infinite !important;
+}
+
+/* New Mentions Indicator */
+.new-messages-indicator {
+    background: linear-gradient(90deg, black, rgb(91, 187, 255), black) !important;
+}
+
+.new-messages-bar {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(91, 187, 255, 0.4), rgba(0, 0, 0, 0.4)) !important;
+}
+
+/* Text Input Enabled */
+.innerEnabled-gLHeOL, .innerEnabledNoAttach-36PpAk {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(91, 187, 255, 0.4), rgba(0, 0, 0, 0.4)) !important;
+}
+/* Text Input Disabled */
+.innerDisabled-2mc-iF {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(91, 187, 255, 0.2), rgba(0, 0, 0, 0.2)) !important;
+}
+
+.jump-to-present-bar {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(91, 187, 255, 0.4), rgba(0, 0, 0, 0.4)) !important;
+}
+
+/* Newe Messages Divider */
+.divider.divider-red:before {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(91, 187, 255, 0.4), rgba(0, 0, 0, 0.4)) !important;
+}
+/* Also Newe Messages Divider */
+.divider.divider-red > div {
+    background: none !important;
+}
+/* Some More Newe Messages Divider */
+.divider.divider-red > span {
+    background: rgb(11, 107, 186) !important;
+    color: rgb(91, 187, 255) !important;
+    animation: mentions 3s infinite !important;
+}
+/* Divider */
+.divider:before {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(91, 187, 255, 0.4), rgba(0, 0, 0, 0.4)) !important;
+}
+/* Some More Divider */
+.divider > div {
+    background: none !important;
+}
+/* Even More Divider */
+.divider > span {
+    background: rgb(68, 94, 115) !important;
+    color: rgb(91, 187, 255) !important;
+}
+
+/* Loading More Messages */
+.loading-more {
+    border: none !important;
+    background: none !important;
+}
+/* Also Loading More Messages */
+.has-more > button {
+    color: rgb(91, 187, 255) !important;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(91, 187, 255, 0.4), rgba(0, 0, 0, 0.4)) !important;
+}
+
+/* Mention */
+.mentioned > .body > .message-text {
+    background: linear-gradient(90deg, rgba(91, 187, 255, 0.4) 0%, rgba(0, 0, 0, 0) 70%) !important;
+}
+/* Also Mention */
+.mentioned > .body > .message-text:after {
+    background: rgb(41, 137, 216) !important;
+    border-color: rgb(41, 137, 216) !important;
+}
+
+/* Private Chanel Selected Chat */
+.channel.selected.private > a {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(41, 137, 216, 0.4)) !important;
+}
+/* ^^ */
+.channel.selected.private > a:hover {
+    background: linear-gradient(90deg, rgba(91, 187, 255, 0.6), rgba(41, 137, 216, 0.4)) !important;
+}
+
+/* Modal Menu */
+.modal-3HD5ck {
+    background-color: rgba(30, 0, 45, 0.9) !important;
+}
+
+/* Some Popout Menu */
+.menu-Sp6bN1 {
+    background-color: rgb(56, 0, 77) !important;
+}*/
+.item-1GzJrl {
+    color: white !important;
+    transition: 0.4s !important;
+}
+.item-1GzJrl:hover {
+    background: rgba(30, 0, 45, 0.7) !important;
+}
+.item-1GzJrl.invite-YM1l0n {
+    color: rgb(91, 187, 255) !important;
+}
+.item-1GzJrl.leave-2bjeRM {
+    color: rgb(255, 97, 31) !important;
+}
+.icon-2doZ3q {
+    background-color: white !important;
+    border-radius: 5px !important;
+    border: 3px solid white !important;
+}
+.separator-2zcjq8 {
+    display: none !important;
+}
+/* Ends Here */
+
+/* Is Typing */
+.typing-2GQL18
+{
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(91, 187, 255, 0.4), rgba(0, 0, 0, 0.4)) !important;
+}
+
+/* Users Loading Side-pannel */
+.channel-members-loading, .channel-members-loading > .member, .channel-members-loading > .heading
+{
+    background: none !important;
+}
+
+/* Settings Cards */
+.cardPrimary-ZVL9Jr, .cardPrimaryEditable-2IQ7-V
+{
+    background:  rgba(91, 187, 255, 0.2) !important;
+    border: 1px solid rgba(91, 187, 255, 0.4) !important;
+}
+
+/* Settings Sliders */
+.barFill-23-gu-
+{
+    background-color: rgb(41, 137, 216) !important;
+}
+.bar-2Qqk5Z
+{
+    background-color: rgb(1, 57, 136) !important;
+}
+
+/* Settings Switch */
+.valueChecked-m-4IJZ
+{
+    background-color: rgb(41, 137, 216) !important;
+}
+
+/* Settings Selected Tab */
+.selected-3s45Ha
+{
+    background: rgba(77, 0, 102, 0.9) !important;
+}
+.notSelected-PgwTMa:hover
+{
+    background: linear-gradient(90deg, rgba(91, 187, 255, 0.6), rgba(41, 137, 216, 0.4)) !important;
+}
+.notSelected-PgwTMa
+{
+    color: white !important;
+}
+
+/* Settings Account Button */
+.accountBtnInner-sj5jLs
+{
+    background-color:  rgb(41, 137, 216) !important;
+    border: 2px solid rgba(91, 187, 255) !important;
+}
+
+/* User Profile Modal */
+/* ==================================================================================================== */
+#user-profile-modal > .scrollerWrap-2lJEkd, #user-profile-modal > .empty {
+    background: rgb(60, 60, 60) !important;
+}
+#user-profile-modal > .scrollerWrap-2lJEkd > .guilds {
+    background: none !important;
+}
+.tab-bar-container {
+    background: rgb(41, 137, 216) !important;
+    border-color: rgb(121, 217, 255) !important;
+}
+.tab-bar-item {
+    color: rgb(121, 217, 255) !important;
+}
+.tab-bar-item.selected {
+    color: white !important;
+    border-color: white !important;
+}
+#user-profile-modal > .scrollerWrap-2lJEkd > .guilds > .guild:hover {
+    background: linear-gradient(90deg, rgba(91, 187, 255, 0.6), rgba(0, 0, 0, 0)) !important;
+}
+#user-profile-modal > .header {
+    background: rgb(41, 137, 216) !important;
+}
+#user-profile-modal > .header:after {
+    background: none !important;
+}
+#user-profile-modal > .avatar-wrapper {
+    background-color: rgb(41, 137, 216) !important;
+}
+#user-profile-modal > .header > .header-info > .header-info-inner > .discord-tag, #user-profile-modal > .header > .header-info > .header-info-inner > .discord-tag > .discriminator, #user-profile-modal > .header > .header-info > .header-info-inner > .activity{
+    color: white !important;
+}
+/* ==================================================================================================== */
+
+@keyframes unread {
+    0%{opacity: 0.3;}
+    50%{opacity: 1;}
+    100%{opacity: 0.3;}
+}
+
+@keyframes mentions {
+    0%{border: 1px solid rgba(41, 137, 216, 0);}
+    10%{border: 1px solid rgb(41, 137, 216);}
+    20%{border: 1px solid rgb(51, 147, 226);}
+    30%{border: 1px solid rgb(81, 177, 255);}
+    40%{border: 1px solid rgb(101, 197, 255);}
+    50%{border: 1px solid rgba(101, 197, 255, 0);}
+    100%{border: 1px solid rgba(41, 137, 216, 0);}
+}
